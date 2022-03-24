@@ -19,3 +19,6 @@ rm -f /root/maxdu
 #df | sed -i '1d' | sort -k 3nr | awk '{print $1,$3}' | head -n 2....wrong because of 'i' in front if 'sed'
 
 #df | sed '1d' | sort -k 3nr | awk '{print $1,$3}' | head -n 2
+
+
+this is new line 1
