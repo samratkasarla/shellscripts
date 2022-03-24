@@ -50,3 +50,6 @@ sed -i 's/DATABASE/studentapp/g' /opt/apache-tomcat-8.5.77/conf/context.xml
 
 yum install mysql -y
 mysql -h 18.234.134.93 -u admin -pAdmin123 studentapp < student-rds.sql
+
+
+this is new line1
