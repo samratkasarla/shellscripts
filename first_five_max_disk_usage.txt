@@ -1,0 +1,21 @@
+#!/bin/bash
+
+df >/root/maxdu
+sed -i '1d' maxdu
+sort -rnk3 maxdu | awk 'FNR < 6 {print $1,$3}' OFS="\t" | head -n 2
+
+rm -f /root/maxdu
+
+
+#!/bin/bash
+
+df >/root/maxdu
+sed -i '1d' maxdu
+sort -k 3nr maxdu | awk '{print $1,$3}' | head -n 2
+
+rm -f /root/maxdu
+
+
+#df | sed -i '1d' | sort -k 3nr | awk '{print $1,$3}' | head -n 2....wrong because of 'i' in front if 'sed'
+
+#df | sed '1d' | sort -k 3nr | awk '{print $1,$3}' | head -n 2
